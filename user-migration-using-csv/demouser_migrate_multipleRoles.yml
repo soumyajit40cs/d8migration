@@ -1,0 +1,34 @@
+uuid: c45b9634-f4ce-4635-b1c2-1ac0ab1f1aa2
+langcode: en
+status: true
+dependencies: {  }
+id: User_with_multiple_roles
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: null
+label: 'User migration from CSV test'
+source:
+  plugin: csv
+  path: 'C:\Users\soumy\Sites\devdesktop\drupal-8.9.1\sites\d8multisite\files\migrate\migrate_csv_users.csv'
+  header_row_count: 1
+  keys:
+    - ID
+process:
+  name: name
+  mail: email
+  roles:
+    plugin: explode
+    delimiter: ','
+    source: roles
+  field_first_name: firstname
+  field_last_name: lastname
+  status: Status
+  pass: Password
+destination:
+  plugin: 'entity:user'
+  md5_passwords: true
+migration_dependencies:
+  required: {  }
+  optional: {  }
