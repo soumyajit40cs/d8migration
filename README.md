@@ -5,3 +5,5 @@ Download "Migrate Plus" and enable it
 Download "Migrate Tools" and enable it.
 Enable drupal migration related core modules
 Ensure you're using the latest version of Drush.
+
+Ref KB: https://www.drupal.org/docs/8/api/migrate-api/migrate-source-plugins/migrating-data-from-a-csv-source
